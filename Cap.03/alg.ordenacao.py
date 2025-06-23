@@ -10,14 +10,20 @@ exibir o array
 ordene em crescente e decrescente
 1 a 100 e 100 a 1
 '''
-print('Algoritimo de ordenação simples')
-number = [3,1,99,63,17,12,0]
+lista1 = [3,1,99,63,17,12,0]
 
-for i in range(len(number)):
-    for j  in range(len(number) -1 ):
-        if number[j] > number[j + 1]:
-            number[j], number [j + 1] = number[j + 1], number[j]
-print("lista ordenada")
-print(number)
+def bubble_sort(arr):
+    print('Algoritimo de ordenação simples')
+    n = len(arr)
+    #para cada elemento i do array
+    for i in range(n):
+        #para cada elemento j do array
+        for j  in range (0, n - i - 1 ):
+            #Se o elemento i for maior que elemento j
+            if arr[j] > arr[j + 1]:
+                #Troque os elementos i e j
+                arr[j], arr [j + 1] = arr[j + 1], arr[j]
+    return arr
 
+print(bubble_sort(lista1))
     
